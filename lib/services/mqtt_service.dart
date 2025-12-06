@@ -54,7 +54,7 @@ class MQTTService {
     if (client!.connectionStatus!.state == MqttConnectionState.connected) {
       print("MQTT Connected with TLS");
 
-      client!.subscribe("/smarthome/sensor/data", MqttQos.atMostOnce);
+      client!.subscribe("home/sensor/data", MqttQos.atMostOnce);
 
       client!.updates!.listen((event) {
         final rec = event[0].payload as MqttPublishMessage;
