@@ -133,7 +133,7 @@ void initState() {
   // CARD STATUS GAS
   // =====================================================================
   Widget gasStatusCard() {
-    final bool detected = data.gas > 1500;
+    final bool detected = data.gas > 1000;
 
     return Card(
       color: const Color(0xff1E1E1E),
